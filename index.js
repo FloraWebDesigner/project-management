@@ -92,11 +92,11 @@ app.post("/login/submit", async (req, res) => {
       req.session.user = {
         userId: userResult._id, 
         username: userResult.username,
-        role: userResult.role,
+        // role: userResult.role,
         email: userResult.email,
       };     
       // console.log("Session after login: ", req.session.user); 
-      if(req.session.user.role)
+      // if(req.session.user.role)
       return res.redirect("/admin/project");
     } else {
       req.flash("error", "Password incorrect");
@@ -178,10 +178,10 @@ app.get("/admin/project", async (req, res) => {
   console.log("initialprojects:",projList);
   console.log("users",req.session.user);
   let title = "Administer Directory Projects";
-  if(req.session.user.role==="user"){  
-    projList = await projects.getUserProj(req.session.user.userId);
-    title = "My Projects";
-  }
+  // if(req.session.user.role==="user"){  
+  //   projList = await projects.getUserProj(req.session.user.userId);
+  //   title = "My Projects";
+  // }
   const formatProjList = projList.map((proj) => {
     proj.createdDateFormatted = new Date(proj.date_added)
       .toISOString()
@@ -314,7 +314,7 @@ app.post("/admin/user/add/submit", async (req, res) => {
   if (!req.session.user) {
     return res.redirect("/login"); 
   }
-  const { username, email, password, role } = req.body;
+  const { username, email, password } = req.body;
   let userResult = await users.findOneByemail(email);
   if (userResult) {
     return render("user-add", {
@@ -329,7 +329,7 @@ app.post("/admin/user/add/submit", async (req, res) => {
       messages: { error: "Email invalid." },
     });
   }
-  await users.addUserAdmin(username, email, password, role);
+  await users.addUserAdmin(username, email, password);
   res.redirect("/admin/user"); 
 })
 
@@ -365,7 +365,7 @@ app.post("/admin/user/edit/submit", async (req, res) => {
   let updatedUser = {
     username: req.body.username,
     email: req.body.email,
-    role: req.body.role,
+    // role: req.body.role,
     password: req.body.password,
     date_added: new Date()
   };

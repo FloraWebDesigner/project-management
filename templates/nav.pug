@@ -12,7 +12,7 @@ nav.navbar.navbar-expand-lg.bg-dark
             if userSession
                 a.nav-link.text-light(href='/logout') Logout
                 a.nav-link.text-light(href='/admin/project') Project
-            if (userSession&&userSession.role==="admin")
+            //- if (userSession&&userSession.role==="admin")
                 a.me-3.nav-link.text-light(href='/admin/user') User
             if userSession                
                 .text-center.my-auto.fw-bolder.text-white Hello #{userSession.username}

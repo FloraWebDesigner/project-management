@@ -27,12 +27,10 @@ body {
     color: rgba(255, 255, 255, 0.6);
 }
 
-
 .rounded{
     width: 12rem;
     object-fit: cover; 
 }
-
 
 .singleImg{
     width: 13rem;

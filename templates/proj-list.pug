@@ -9,8 +9,8 @@ block layout-content
         th Image
         th Project
         th Author
-        if(userSession.role==="admin")
-          th CreatedBy
+        //- if(userSession.role==="admin")
+        th CreatedBy
         th CreatedAt
         th Operation 
       tbody.fs-4 
@@ -20,8 +20,8 @@ block layout-content
               img.rounded(src="/img/" + proj.screen style="height: 181.81px;")
             td.align-middle #{proj.website_name}
             td.align-middle #{proj.Github_username}
-            if(userSession.role==="admin")
-              td.align-middle #{proj.createdBy.email}
+            //- if(userSession.role==="admin")
+            td.align-middle #{proj.createdBy.email}
             td.align-middle #{proj.createdDateFormatted}
             td.text-end
               a.btn.btn-warning.w-75.mb-1(href=proj.GitHub_repo) Repo
