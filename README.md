@@ -6,6 +6,6 @@ This project includes a LOGIN part.
 
 Login Info
 
-Email: test@123.com
+Email: flora@123.com
 
-Password: test.123
+Password: flora.123
