@@ -216,7 +216,7 @@ app.post("/admin/project/add/submit", upload.single('screen'),async (req, res) =
     Github_username: req.body.Github_username,
     URL: req.body.URL,
     GitHub_repo: req.body.GitHub_repo,
-    screen: req.file.filename,
+    screen: req.file.filename || 'placeholder.jpg',
     date_added: new Date(),
     createdBy:req.session.user.userId,
    /*  number: req.body.projId */
@@ -265,7 +265,7 @@ app.post("/admin/project/edit/submit", upload.single('screen'),async (req, res) 
     Github_username: req.body.Github_username,
     URL: req.body.URL,
     GitHub_repo: req.body.GitHub_repo,
-    screen: editScreen,
+    screen: editScreen || 'placeholder.jpg',
     // date_added: new Date(),
     // createdBy:req.session.user.userId
   };
