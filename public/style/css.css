@@ -1,75 +1,72 @@
-@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Luckiest+Guy&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Luckiest+Guy&display=swap");
 
-html, body{
-    margin: 0;
-    padding: 0;
-    width: 100%; 
-    height: 100%;
+html,
+body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
 }
 
 body {
-    font-family: "Luckiest Guy", Lato, serif;
+  font-family: "Luckiest Guy", Lato, serif;
 }
 
-.home{
-    height: 100vh;
+.home {
+  min-height: 85vh;
 }
 
 .container-fluid h1 {
-    font-family: "Luckiest Guy", cursive;
-    font-weight: 400;
-    font-style: normal;
-    color:white;
+  font-family: "Luckiest Guy", cursive;
+  font-weight: 400;
+  font-style: normal;
+  color: white;
 }
 
-.container-fluid p{
-    font-family: Lato;
-    color: rgba(255, 255, 255, 0.6);
+.container-fluid p {
+  font-family: Lato;
+  color: rgba(255, 255, 255, 0.6);
 }
 
-.rounded{
-    width: 12rem;
-    object-fit: cover; 
+.rounded {
+  width: 12rem;
+  object-fit: cover;
 }
 
-.singleImg{
-    width: 13rem;
-    height: 12.5rem;
-    object-fit: cover;
+.singleImg {
+  width: 13rem;
+  height: 12.5rem;
+  object-fit: cover;
 }
 
-.card-img-top:hover{
-    border: 1px solid black;
+.card-img-top:hover {
+  border: 1px solid black;
 }
 
 figcaption p,
 .randomWeb p {
-    font-family: Lato;
-    font-weight: 400;
-    font-style: normal;
+  font-family: Lato;
+  font-weight: 400;
+  font-style: normal;
 }
 
 .project {
-    display: none;
-} 
-
-.project{
-    flex-direction: column;
-    background-color: white;
+  display: none;
 }
 
+.project {
+  flex-direction: column;
+  background-color: white;
+}
 
 #footer {
-    color: rgba(255, 255, 255, 0.6);
+  color: rgba(255, 255, 255, 0.6);
 }
 
-.hide{
-    display: none;
+.hide {
+  display: none;
 }
 
-
-.display{
-    display:flex;
+.display {
+  display: flex;
 }
-
-
